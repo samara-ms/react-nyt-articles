@@ -1,0 +1,17 @@
+{
+    "results": [
+      {
+        "id": 1,
+        "title": "Test Article 1",
+        "byline": "By Test Author 1",
+        "abstract": "This is a test abstract for Article 1."
+      },
+      {
+        "id": 2,
+        "title": "Test Article 2",
+        "byline": "By Test Author 2",
+        "abstract": "This is a test abstract for Article 2."
+      }
+    ]
+  }
+  
