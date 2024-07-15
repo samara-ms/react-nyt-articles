@@ -1,0 +1,107 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$clr-black: #000;
+$border-radius: 5px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.article-list {
+    text-align: center;
+
+    h1 {
+        margin: 40px auto;
+        font-size: 2rem;
+    }
+
+    .articles {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .article-item {
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            transition: transform 0.3s ease-in-out;
+            max-width: 300px;
+            text-align: left;
+
+            &:hover {
+                transform: scale(1.02);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .image-container {
+                margin-bottom: 10px;
+
+                .article-image {
+                    max-width: 100%;
+                    border-radius: $border-radius;
+                    box-shadow: $box-shadow;
+                }
+
+            }
+            
+            .article-title {
+                font-size: 1.25rem;
+                color: $primary-color;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            
+            .byline {
+                font-size: 0.875rem;
+                color: $secondary-color;
+                margin-top: 5px;
+            }
+            .line{
+                background: red;
+                position: relative;
+                height: 1px;
+                width: 30%;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+            .image-caption {
+                font-size: 0.875rem;
+                color: $clr-black;
+                margin-top: 5px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+    .articles {
+        .article-item {
+            flex: 1 1 calc(50% - 40px); // Each item will take up 1/2 of the container width minus the gap
+            max-width: calc(50% - 40px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .articles {
+        .article-item {
+            flex: 1 1 calc(100% - 20px); // Each item will take up the full container width minus the gap
+            max-width: calc(100% - 20px);
+        }
+    }
+}

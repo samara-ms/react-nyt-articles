@@ -19,6 +19,11 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+Launches the test runner in interactive watch mode using Jest.
+
+### `npm run cypress:open`
+Opens the Cypress Test Runner for end-to-end UI testing. Ensure your app is running with npm start before running Cypress tests.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -68,3 +73,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Folder Structure
+public/: Static assets and index.html.
+src/: Source code for the React app.
+components/: React components.
+Api.js: Contains functions to fetch data from the NY Times API.
+App.js: Main component for routing.
+index.js: Entry point of the app.
+
+### Dependencies
+react: JavaScript library for building user interfaces.
+react-router-dom: Routing library for React.
+axios: Promise-based HTTP client for the browser and Node.js.
+react-loader-spinner: Loader component for indicating loading state.
+sass: CSS extension language for styling.
+
+### Dev Dependencies
+eslint, eslint-config-prettier, eslint-plugin-prettier: For linting and code quality.
+@babel/plugin-proposal-private-property-in-object: Babel plugin for private properties in objects.
+cypress: End-to-end testing framework.
+@testing-library/react, @testing-library/jest-dom, @testing-library/user-event: Testing utilities and assertions for React components.
+prettier: Code formatter.
