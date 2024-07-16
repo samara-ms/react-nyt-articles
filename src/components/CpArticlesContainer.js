@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchArticles } from '../Api';
 import CpArticleList from './CpArticleList';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const CpArticlesContainer = () => {
     const [articles, setArticles] = useState([]);
@@ -19,11 +18,7 @@ const CpArticlesContainer = () => {
     }, []);
 
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<CpArticleList articles={articles} loading={loading} />} />
-            </Routes>
-        </Router>
+            <CpArticleList articles={articles} loading={loading} />
     );
 };
 
